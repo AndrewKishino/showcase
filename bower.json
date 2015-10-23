@@ -1,0 +1,24 @@
+{
+  "name": "Showcase",
+  "version": "0.0.1",
+  "description": "Lets Make Something",
+  "homepage": "https://github.com/andrewkishino/showcase",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.5",
+    "angular-sanitize": "~1.4.5",
+    "angular-ui-router": "~0.2.15",
+    "underscore": "~1.8.3"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.4.5"
+  }
+}
