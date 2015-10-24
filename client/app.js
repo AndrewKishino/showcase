@@ -32,6 +32,12 @@
         url: '/',
         templateUrl: 'components/home/home.html'
       });
+
+    $stateProvider
+      .state('update', {
+        url: '/update',
+        templateUrl: 'components/update/update.html'
+      });
   }
 
   /**
