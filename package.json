@@ -6,7 +6,6 @@
   "main": "server/index.js",
   "scripts": {
     "start": "node server/index.js",
-    "postinstall": "gulp build",
     "postinstall": "bash ./deploy.sh"
   },
   "dependencies": {
