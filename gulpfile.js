@@ -97,6 +97,7 @@
    * as they encompass the above.
    */
   gulp.task('default', ['styles', 'lint', 'watchStyles', 'watchScripts']);
+  gulp.task('build', ['styles']);
   gulp.task('styles:dev', ['styles', 'watchStyles']);
   gulp.task('scripts:dev', ['lint', 'watchScripts']);
 
