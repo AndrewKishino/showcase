@@ -5,9 +5,9 @@
   "homepage": "https://github.com/andrewkishino/showcase",
   "main": "server/index.js",
   "scripts": {
-    "build": "bash ./build.sh",
     "start": "node server/index.js",
-    "postinstall": "bash ./deploy.sh"
+    "postinstall": "bash ./deploy.sh",
+    "postinstall": "gulp build"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
