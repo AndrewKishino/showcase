@@ -5,7 +5,7 @@
   "homepage": "https://github.com/andrewkishino/showcase",
   "main": "server/index.js",
   "scripts": {
-    "build": "gulp",
+    "build": "./node_modules/gulp/bin/gulp build",
     "start": "node server/index.js",
     "postinstall": "bash ./deploy.sh"
   },
