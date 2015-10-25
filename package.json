@@ -5,6 +5,7 @@
   "homepage": "https://github.com/andrewkishino/showcase",
   "main": "server/index.js",
   "scripts": {
+    "build": "gulp",
     "start": "node server/index.js",
     "postinstall": "bash ./deploy.sh"
   },
@@ -12,9 +13,11 @@
     "bcrypt-nodejs": "0.0.3",
     "bluebird": "^2.9.34",
     "body-parser": "^1.13.3",
+    "bookshelf": "^0.8.2",
     "bower": "^1.5.2",
     "dotenv": "^1.2.0",
     "express": "~4.9.x",
+    "knex": "^0.8.6",
     "morgan": "^1.6.1",
     "mysql": "^2.9.0",
     "q": "^1.4.1",
