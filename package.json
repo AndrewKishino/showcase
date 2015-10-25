@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node server/index.js",
     "postinstall": "bash ./deploy.sh",
-    "postinstall": "gulp build"
+    "postinstall": "bash ./build.sh"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
