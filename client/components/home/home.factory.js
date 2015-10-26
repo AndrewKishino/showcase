@@ -15,8 +15,7 @@
     function homeFactory($q, $http) {
 
       var factory = {
-        getLocations: getLocations,
-        verifyKey: verifyKey
+        getLocations: getLocations
       };
 
       return factory;
@@ -36,33 +35,6 @@
             return response.data;
           });
       }
-
-      /**
-       * ferdFactory.verifyKey
-       * 
-       * @description Verifies if slack api key is valid and if it is, that it
-       *   belongs to the same org as user's submission.
-       * @param {String} apikey The API key to check
-       * @return {Object} A promise object
-       */
-      function verifyKey(apikey) {
-        var url = 'https://slack.com/api/rtm.start?token=' + apikey;
-        return $http.get(url)
-          .then(function(response) {
-            return $q(function(resolve, reject) {
-              if(response.data && response.data.team &&
-                response.data.team.domain === authFactory.authUser.slackOrganization) {
-                resolve(true);
-              } else {
-                reject(false);
-              }
-            });
-          })
-          .catch(function(error) {
-            throw error.data;
-          });
-      }
-
     }
 
 })();

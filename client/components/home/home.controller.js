@@ -38,6 +38,9 @@
 
     function init() {
       vm.getLocations();
+      window.setInterval(function() {
+        vm.getLocations();
+      }, 2000);
     }
   }
 

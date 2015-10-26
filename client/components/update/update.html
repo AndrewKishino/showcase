@@ -1,3 +1,8 @@
 <div ng-controller="UpdateController as update">
-UPDATE!
+  <div class="settings-box">
+    <h3>Press Update to update the car positions</h3>
+    <form novalidate class="simple-form">
+      <button class="myButton" type="submit" ng-click="update.update(update.interval)">Update</button>
+      </form>
+  </div>
 </div>

@@ -52,12 +52,24 @@ module.exports = {
    * @return {Object} Returns user data on success, error on fail
    */
   update: function(req, res, next) {
-    mysql.query('SELECT * from cars', function(err, rows, fields) {
-      if (!err)
-        console.log('The solution is: ', rows);
-      else
-        console.log('Error while performing Query.');
-    });
+    var data = req.body;
+
+    var getRandLat = function() {
+      return Math.random() * (50 - 30) + 30;
+    };
+
+    var getRandLon = function() {
+      return Math.random() * (120 - 80) + 80;
+    };
+
+    for(var i = 1; i <= 20; i++) {
+      mysql.query('UPDATE cars SET lat=-' + 
+                  getRandLat() + ', lon=' + 
+                  getRandLon() + ' WHERE id=' + i);
+    }
+
+    data = {};
+    return res.status(201).send(data);
   },
 
   /**

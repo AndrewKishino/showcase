@@ -16,8 +16,14 @@
    * @description Contains all the functionality for the UpdateController. Returns
    *   nothing.
    */
-  function UpdateController() {
+  function UpdateController(updateFactory) {
     var vm = this;
+
+    vm.update = update;
+
+    function update(interval) {
+      updateFactory.update();
+    }
   }
 
 })();
