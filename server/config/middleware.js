@@ -10,11 +10,11 @@ module.exports = function (app, express) {
   app.use(express.static(path.join(__dirname + '/../../client')));
 
   // define routers
-  // var usersRouter = express.Router();
+  var carsRouter = express.Router();
 
   // api paths for various routes
-  // app.use('/api/users', usersRouter);
+  app.use('/api/cars', carsRouter);
 
   // require necessary route files
-  // require('../api/users/userRoutes.js')(usersRouter);
+  require('../api/cars/carRoutes.js')(carsRouter);
 };

@@ -16,8 +16,29 @@
    * @description Contains all the functionality for the HomeController. Returns
    *   nothing.
    */
-  function HomeController() {
+  function HomeController(homeFactory) {
     var vm = this;
+    vm.getLocations = getLocations;
+    vm.carPositions = [];
+
+    init();
+
+    /**
+     * HomeController.getLocations
+     * 
+     * @description Signs a user up. Returns nothing.
+     * @param {Object} e The event object from form submission.
+     */
+    function getLocations() {
+      homeFactory.getLocations()
+        .then(function(data) {
+          vm.carPositions = data;
+        });
+    }
+
+    function init() {
+      vm.getLocations();
+    }
   }
 
 })();
