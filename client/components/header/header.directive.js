@@ -45,6 +45,14 @@
           dbUpdate.classList.add('active');
         }
       });
+
+      if(window.location.hash === '#/') {
+        geoTable.classList.add('active');
+      }
+
+      if(window.location.hash === '#/update') {
+        dbUpdate.classList.add('active');
+      }
     }
   }
 

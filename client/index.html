@@ -13,14 +13,17 @@
   <script src="lib/angular-sanitize/angular-sanitize.min.js"></script>
 </head>
 <body>
-  <header-directive></header-directive>
-  <div ui-view></div>
+  <div class="container">
+    <header-directive></header-directive>
+    <div class="main" ui-view></div>
+  </div>
   <footer-directive></footer-directive>
   <script src="app.js"></script>
   <script src="components/header/header.directive.js"></script>
   <script src="components/footer/footer.directive.js"></script>
   <script src="components/alerts/alerts.directive.js"></script>
   <script src="components/home/home.controller.js"></script>
+  <script src="components/home/home.factory.js"></script>
   <script src="components/update/update.controller.js"></script>
 </body>
 </html>
