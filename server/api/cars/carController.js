@@ -63,8 +63,8 @@ module.exports = {
     };
 
     for(var i = 1; i <= 20; i++) {
-      mysql.query('UPDATE cars SET lat=-' + 
-                  getRandLat() + ', lon=' + 
+      mysql.query('UPDATE cars SET lat=' + 
+                  getRandLat() + ', lon=-' + 
                   getRandLon() + ' WHERE id=' + i);
     }
 
