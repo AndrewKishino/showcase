@@ -3,6 +3,8 @@ body {
   font-family: 'Roboto', sans-serif;
   padding: 0;
   margin: 0;
+  height: 100%;
+  min-height: 100%;
 }
 
 #cssmenu {
@@ -135,6 +137,50 @@ body {
   }
 }
 
+.footer {
+  background: #F96E5B;
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  padding: 20px 0;
+  clear: both;
+  position: relative;
+  z-index: 10;
+}
+
+.footer a {
+  margin: auto auto;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #FFF;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    background: #F96E5B;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    padding: 5px 0;
+    clear: both;
+    position: relative;
+    z-index: 10;
+  }
+  .footer a {
+    margin: auto auto;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #FFF;
+    font-size: 10px;
+  }
+}
+
 /* Component styles */
 @font-face {
   font-family: 'Blokk';
@@ -147,7 +193,7 @@ body {
 .component {
   line-height: 1.5em;
   margin: 0 auto;
-  padding: 2em 0 3em;
+  padding: 2em 0 0;
   width: 90%;
   max-width: 500px;
   overflow: hidden;
