@@ -6,7 +6,7 @@ var app = express();
 require('./middleware.js')(app, express);
 
 // set port
-app.set('port', (process.env.PORT || 5000));
+app.set('port', (process.env.PORT || 5000));  
 console.log('Listening on port ' + app.get('port'));
 
 // export our app for testing

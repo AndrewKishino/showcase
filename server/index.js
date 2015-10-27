@@ -15,11 +15,13 @@ io.on('connection', function(socket){
   });
 });
 
+app.set('port', (process.env.PORT || 5000));  
+
 // configure our server with all the middleware
 require('./config/middleware.js')(app, require('express'));
 
-http.listen(5000, function(){
-  console.log('listening on *:3000');
+http.listen(app.get('port'), function(){
+  console.log('listening on *:5000');
 });
 
 
