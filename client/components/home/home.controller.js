@@ -23,6 +23,12 @@
 
     init();
 
+    var socket = io();
+
+    socket.on('update', function(){
+      vm.getLocations();
+    });
+
     /**
      * HomeController.getLocations
      * 
@@ -38,9 +44,6 @@
 
     function init() {
       vm.getLocations();
-      window.setInterval(function() {
-        vm.getLocations();
-      }, 2000);
     }
   }
 

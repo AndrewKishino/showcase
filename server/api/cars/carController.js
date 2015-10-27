@@ -1,5 +1,4 @@
 var _mysql = require('mysql');
-var Q = require('q');
 var request = require('request');
 
 var HOST = 'us-cdbr-iron-east-03.cleardb.net';

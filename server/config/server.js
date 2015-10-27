@@ -1,4 +1,4 @@
-// boot up express express and mongoose
+// boot up express express
 var express = require('express');
 var app = express();
 

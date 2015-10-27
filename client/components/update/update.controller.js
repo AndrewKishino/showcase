@@ -19,10 +19,13 @@
   function UpdateController(updateFactory) {
     var vm = this;
 
-    vm.update = update;
+    var socket = io();
+
+    vm.update = update;    
 
     function update(interval) {
       updateFactory.update();
+      socket.emit('update');
     }
   }
 
